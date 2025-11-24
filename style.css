@@ -1,0 +1,718 @@
+:root {
+    --primary-color: #ff6f61;
+    --secondary-color: #5d5d81;
+    --accent-color: #f7b32b;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 5%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--text-light);
+    border-bottom: 3px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    text-decoration: none;
+}
+
+.hero-banner {
+    background: url(imagenes/lindo-mascota-collage-aislado.jpg) no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+}
+
+.hero-banner::before { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slogan {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #e6a21a;
+    text-decoration: none;
+}
+
+.carousel-section {
+    background-color: var(--text-light);
+}
+
+.css-carousel {
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+    display: flex;
+    width: 400%; 
+    animation: slide-animation 12s infinite;/
+}
+
+.carousel-slide {
+    width: 25%; 
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.slide-1 { background-image: url(imagenes/manos-de-primer-plano-sosteniendo-perro-sonriente.jpg); }
+.slide-2 { background-image: url(imagenes/mujer-abrazando-lindo-perro-de-rescate.jpg); }
+.slide-3 { background-image: url(imagenes/vista-de-lindo-perro-disfrutando-del-tiempo-en-la-naturaleza-en-el-parque.jpg); }
+
+
+.caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--text-light);
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 0;
+}
+
+
+@keyframes slide-animation {
+
+    0% { transform: translateX(0%); }
+    22% { transform: translateX(0%); } 
+
+
+    25% { transform: translateX(-25%); }
+    47% { transform: translateX(-25%); } 
+
+    50% { transform: translateX(-50%); } 
+    72% { transform: translateX(-50%); }
+
+
+    75% { transform: translateX(-75%); } 
+    97% { transform: translateX(-75%); }
+    
+    100% { transform: translateX(0%); }
+}
+
+.destacados-home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.summary-labor {
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.summary-labor h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.q-link {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.q-link:hover {
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.q-link i {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+
+.testimonios-section {
+    background-color: var(--text-light);
+    padding-top: 20px;
+}
+
+.testimonios-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+blockquote {
+    max-width: 450px;
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+    font-style: italic;
+    background-color: #fff0d8;
+    border-radius: 5px;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+.mision-vision-container {
+    display: flex;
+    gap: 30px;
+    padding: 50px 5%;
+    background-color: #f0e6e6;
+}
+
+.mv-block {
+    flex: 1;
+    padding: 25px;
+    text-align: center;
+    background-color: var(--text-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mv-block i {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.mv-block h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+
+.catalogo-adoptar {
+    background-color: var(--bg-light);
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.animal-card {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.status.available {
+    background-color: #4CAF50;
+    color: var(--text-light);
+}
+
+.status.adopted {
+    background-color: #f44336;
+    color: var(--text-light);
+}
+
+.button-profile {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.button-profile:hover:not(.disabled) {
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+.button-profile.disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.animal-detail-page {
+    background-color: var(--text-light);
+}
+
+.detail-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.detail-photo {
+    flex: 1;
+    max-width: 50%;
+}
+
+.detail-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.detail-info {
+    flex: 1;
+    max-width: 50%;
+}
+
+.detail-info h3 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.characteristics ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.characteristics li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.characteristics li i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.cta-adoption {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.cta-adoption:hover {
+    background-color: #e55c50;
+    text-decoration: none;
+}
+
+
+.related-animals-container {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.related-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.related-carousel .animal-card {
+    min-width: 250px;
+    max-width: 250px;
+    flex-shrink: 0; 
+}
+
+.contact-section {
+    background-color: var(--text-light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-color);
+}
+
+.contact-form input.error, 
+.contact-form select.error,
+.contact-form textarea.error {
+    border-color: #f44336; 
+}
+
+
+.error-message {
+    color: #f44336;
+    font-size: 0.9em;
+    display: none;
+    margin-top: -8px; 
+}
+
+
+.contact-form input.error + .error-message,
+.contact-form input.error:not(:focus) + .error-message { 
+    display: block;
+}
+
+.success-message {
+    background-color: #4CAF50;
+    color: var(--text-light);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.contact-info {
+    padding: 20px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ==================================== */
+/* 7. Pie de Página (Footer) */
+/* ==================================== */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-footer a {
+    color: var(--accent-color);
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .developer {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+
+/* ==================================== */
+/* 8. Responsive Design (Media Queries) */
+/* ==================================== */
+
+/* Tablet y Móvil */
+@media (max-width: 900px) {
+    
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    /* Misión y Visión: Apilar en móvil */
+    .mision-vision-container {
+        flex-direction: column;
+    }
+    
+    /* Perfil de Animal: Apilar imagen y contenido */
+    .detail-content {
+        flex-direction: column;
+    }
+
+    .detail-photo, 
+    .detail-info {
+        max-width: 100%;
+    }
+
+    /* Contacto: Apilar formulario e información */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Encabezado: Navegación apilada o columna si el espacio es limitado */
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    
+    /* Destacados Home: Columna simple en móvil */
+    .destacados-home {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Carrusel de CSS: Ajuste de dimensiones si es necesario */
+    .carousel-slide {
+        height: 300px;
+    }
+
+    /* Footer: Columna simple en móvil */
+    .footer-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Móvil Pequeño */
+@media (max-width: 500px) {
+    .quick-links {
+        grid-template-columns: 1fr; /* Links de labor en columna simple */
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+    
+    .slogan {
+        font-size: 1.2em;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .main-nav li {
+        width: 100%;
+        text-align: center;
+    }
+}

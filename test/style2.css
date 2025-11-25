@@ -32,6 +32,7 @@
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    height: 300px;
 }
 
 :root {
@@ -46,7 +47,7 @@
 .animal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 10px;
 }
 
 .animal-card {
@@ -61,13 +62,6 @@
     transform: translateY(-5px);
 }
 
-.animal-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
 .card-content {
     padding: 15px;
 }
@@ -75,5 +69,129 @@
 .card-content h4 {
     color: var(--primary-color);
     margin-bottom: 5px;
-    font-size: 1.4em;
+    font-size: 4em;
+}
+
+.card-content h1 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-footer a {
+    color: var(--accent-color);
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .developer {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.button-contribuye {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    align-self: center;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    /* Misión y Visión: Apilar en móvil */
+    .mision-vision-container {
+        flex-direction: column;
+    }
+    
+    /* Perfil de Animal: Apilar imagen y contenido */
+    .detail-content {
+        flex-direction: column;
+    }
+
+    .detail-photo, 
+    .detail-info {
+        max-width: 100%;
+    }
+
+    /* Contacto: Apilar formulario e información */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Encabezado: Navegación apilada o columna si el espacio es limitado */
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    
+    /* Destacados Home: Columna simple en móvil */
+    .destacados-home {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Carrusel de CSS: Ajuste de dimensiones si es necesario */
+    .carousel-slide {
+        height: 300px;
+    }
+
+    /* Footer: Columna simple en móvil */
+    .footer-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Móvil Pequeño */
+@media (max-width: 500px) {
+    .quick-links {
+        grid-template-columns: 1fr; /* Links de labor en columna simple */
+    }
+       
+    .main-nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .main-nav li {
+        width: 100%;
+        text-align: center;
+    }
 }

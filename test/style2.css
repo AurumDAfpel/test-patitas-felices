@@ -117,12 +117,14 @@
     margin-top: 20px;
     transition: background-color 0.3s;
 }
-.contenefor-grafica{
+.contenedor-grafica{
     background-color: var(--secondary-color);
     padding: 20px;
     border: #5d5d81;
     border-radius: 50%;
     display: flex;
+    width: 80%;
+    height: 100%;
 }
 
 .narrativa{

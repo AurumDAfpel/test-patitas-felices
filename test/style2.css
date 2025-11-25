@@ -15,3 +15,30 @@
     top: 0;
     z-index: 1000;
 }
+
+.catalogo-adoptar {
+    background-color: var(--bg-light);
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.animal-card {
+    background-color: var(--text-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+:root {
+    --primary-color: #ff6f61;
+    --secondary-color: #5d5d81;
+    --accent-color: #f7b32b;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f9f9f9;
+}

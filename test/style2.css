@@ -116,10 +116,18 @@
     font-weight: bold;
     margin-top: 20px;
     transition: background-color 0.3s;
-    align-self: center;
-    position: relative;
+}
+.contenefor-grafica{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border: #5d5d81;
+    border-radius: 50%;
+    display: flex;
 }
 
+.narrativa{
+    font-size: larger;
+}
 @media (max-width: 900px) {
     
     .hero-content h2 {
